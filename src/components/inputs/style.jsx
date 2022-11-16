@@ -42,9 +42,6 @@ export const Request = styled.form`
     }
   }
 
-  button {
-  }
-
   p {
     font-size: 0.8rem;
     font-weight: 100;

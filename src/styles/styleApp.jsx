@@ -9,6 +9,7 @@ export const AppDiv = styled.div`
   height: 90vh;
   max-height: 720px;
   margin: auto;
+  margin-top: 5vh;
 
   padding: 50px;
 
