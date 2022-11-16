@@ -1,4 +1,4 @@
-import { Request } from "./style";
+import { Button, Request } from "./style";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -7,11 +7,12 @@ import { useContext } from "react";
 import { ResponseContext } from "../../providers/response";
 import { TbCurrencyReal } from "react-icons/tb"
 import { FaTimes, FaPercentage } from "react-icons/fa"
-import InputMask from "react-input-mask"
+import { StatusContext } from "../../providers/networkStatus";
 
 
 function InputInfo() {
   const { setResp } = useContext(ResponseContext);
+  const { status, isOnline } = useContext(StatusContext)
 
   const formSchema = yup.object().shape({
     amount: yup.number().required("Digite o valor do pagamento!").positive(),
@@ -59,7 +60,7 @@ function InputInfo() {
         </div>
       </div>
 
-      <button>Consultar</button>
+      <Button isOnline={isOnline} disabled={!isOnline}>Consultar</Button>
     </Request>
   );
 }
