@@ -8,11 +8,13 @@ import { ResponseContext } from "../../providers/response";
 import { TbCurrencyReal } from "react-icons/tb"
 import { FaTimes, FaPercentage } from "react-icons/fa"
 import { StatusContext } from "../../providers/networkStatus";
+import { LoaderContext } from "../../providers/loader";
 
 
 function InputInfo() {
   const { setResp } = useContext(ResponseContext);
-  const { status, isOnline } = useContext(StatusContext)
+  const { isOnline } = useContext(StatusContext)
+  const { setIsLoading } = useContext(LoaderContext);
 
   const formSchema = yup.object().shape({
     amount: yup.number().required("Digite o valor do pagamento!").positive(),
@@ -29,8 +31,12 @@ function InputInfo() {
   });
 
   function onSubmitFunction(data) {
+    setIsLoading(true)
     Api.post("", data)
-      .then((res) => setResp(res))
+      .then((res) => {
+        setResp(res)
+        setIsLoading(false)
+      })
       .catch((err) => console.log(err));
   }
 
@@ -60,7 +66,7 @@ function InputInfo() {
         </div>
       </div>
 
-      <Button isOnline={isOnline} disabled={!isOnline}>Consultar</Button>
+      <Button isOnline={isOnline} disabled={!isOnline} >Consultar</Button>
     </Request>
   );
 }
