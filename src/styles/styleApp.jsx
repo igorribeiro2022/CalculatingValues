@@ -33,6 +33,7 @@ export const Status = styled.div`
   padding: 0 10px;
   height: 20px;
   border-radius: 20px;
+  cursor: default;
   color: var(--gray-0);
   background-color: ${props => props.isOnline ? "var(--sucess)" : "var(--negative)"};
   font-size: 0.8rem;
