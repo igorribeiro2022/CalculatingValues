@@ -19,4 +19,21 @@ export const AppDiv = styled.div`
     display: flex;
     width: 100%;
   }
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
 `;
+
+export const Status = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 20px;
+  border-radius: 20px;
+  color: var(--gray-0);
+  background-color: ${props => props.isOnline ? "var(--sucess)" : "var(--negative)"};
+  font-size: 0.8rem;
+`
