@@ -3,28 +3,35 @@ import { ResponseContext } from "../../providers/response";
 import { Response } from "./style";
 
 function OutputInfo() {
-    const { resp } = useContext(ResponseContext);
-    const data = resp.data
-    console.log("CONSOLE.LOG AQUIIIII -----> ", data);
+  const { resp } = useContext(ResponseContext);
 
-    let entriesObj = Object.entries(data);
+  let ent = null;
 
-    return (
-        <Response>
-            <h2>Você Receberá:</h2>
+  if (resp !== null) {
+    ent = Object.entries(resp.data);
+  }
 
-            {
-                entriesObj.forEach(entrie => {
-                    <p>{entrie[0][0] === 1 ? "Amanhã" : `Em ${entrie[0][0]} dias` }: <span>{entrie[0][1]}</span></p>
-                })
-            }
+  return (
+    <Response>
+      <h2>Você Receberá:</h2>
 
-            <p>Amanhã: <span>R$ 0,00</span></p>
-            <p>Em 15 dias: <span>R$ 0,00</span></p>
-            <p>Em 30 dias: <span>R$ 0,00</span></p>
-            <p>Em 60 dias: <span>R$ 0,00</span></p>
-        </Response>
-    );
+      {ent !== null ? (
+        ent.map((ent) => (
+          <p>
+            {ent[0] === "1" ? "Amanhã" : `Em ${ent[0]} dias`}:{" "}
+            <span>{ent[1].toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
+          </p>
+        ))
+      ) : (
+        <>
+          <p>Amanhã: <span>R$ 0,00</span></p>
+          <p>Em 15 dias: <span>R$ 0,00</span></p>
+          <p>Em 30 dias: <span>R$ 0,00</span></p>
+          <p>Em 60 dias: <span>R$ 0,00</span></p>
+        </>
+      )}
+    </Response>
+  );
 }
-  
+
 export default OutputInfo;
