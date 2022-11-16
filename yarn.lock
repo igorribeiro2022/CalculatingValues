@@ -2074,6 +2074,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-input-mask@^3.0.2":
+  "integrity" "sha512-WTli3kUyvUqqaOLYG/so2pLqUvRb+n4qnx2He5klfqZDiQmRyD07jVIt/bco/1BrcErkPMtpOm+bHii4Oed6cQ=="
+  "resolved" "https://registry.npmjs.org/@types/react-input-mask/-/react-input-mask-3.0.2.tgz"
+  "version" "3.0.2"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*":
   "integrity" "sha512-xD6c0KDT4m7n9uD4ZHi02lzskaiqcBxf4zi+tXZY98a04wvc0hi/TcCPC2FOESZi51Nd7tlUeOJY8RofL799/g=="
   "resolved" "https://registry.npmjs.org/@types/react/-/react-18.0.25.tgz"
@@ -5164,6 +5171,13 @@
     "has" "^1.0.3"
     "side-channel" "^1.0.4"
 
+"invariant@^2.2.4":
+  "integrity" "sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA=="
+  "resolved" "https://registry.npmjs.org/invariant/-/invariant-2.2.4.tgz"
+  "version" "2.2.4"
+  dependencies:
+    "loose-envify" "^1.0.0"
+
 "ipaddr.js@^2.0.1":
   "integrity" "sha512-1qTgH9NG+IIJ4yfKs2e6Pp1bZg8wbDbKHT21HrLIeYBTRLgMYKnMTPAuI3Lcs61nfx5h1xlXnbJtH1kX5/d/ng=="
   "resolved" "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-2.0.1.tgz"
@@ -6256,7 +6270,7 @@
   "resolved" "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   "version" "4.17.21"
 
-"loose-envify@^1.1.0", "loose-envify@^1.4.0":
+"loose-envify@^1.0.0", "loose-envify@^1.1.0", "loose-envify@^1.4.0":
   "integrity" "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q=="
   "resolved" "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
   "version" "1.4.0"
@@ -7620,7 +7634,7 @@
     "strip-ansi" "^6.0.1"
     "text-table" "^0.2.0"
 
-"react-dom@^18.0.0", "react-dom@^18.2.0", "react-dom@>= 16.8.0", "react-dom@>=16", "react-dom@>=16.8 || ^17.0.0":
+"react-dom@^18.0.0", "react-dom@^18.2.0", "react-dom@>= 16.8.0", "react-dom@>=0.14.0", "react-dom@>=16", "react-dom@>=16.8 || ^17.0.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -7637,6 +7651,19 @@
   "integrity" "sha512-H/vwk1vBf+TiXuyW6+hWz+zCujiDO6NqHlN5sPE/a+NGKKGK95XTM65DZz3NmEgs2M20Wka+g4uv4VD367wDBA=="
   "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.39.3.tgz"
   "version" "7.39.3"
+
+"react-icons@^4.6.0":
+  "integrity" "sha512-rR/L9m9340yO8yv1QT1QurxWQvWpbNHqVX0fzMln2HEb9TEIrQRGsqiNFQfiv9/JEUbyHmHPlNTB2LWm2Ttz0g=="
+  "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.6.0.tgz"
+  "version" "4.6.0"
+
+"react-input-mask@^2.0.4":
+  "integrity" "sha512-1hwzMr/aO9tXfiroiVCx5EtKohKwLk/NT8QlJXHQ4N+yJJFyUuMT+zfTpLBwX/lK3PkuMlievIffncpMZ3HGRQ=="
+  "resolved" "https://registry.npmjs.org/react-input-mask/-/react-input-mask-2.0.4.tgz"
+  "version" "2.0.4"
+  dependencies:
+    "invariant" "^2.2.4"
+    "warning" "^4.0.2"
 
 "react-is@^16.13.1", "react-is@^16.7.0", "react-is@>= 16.8.0":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
@@ -7720,7 +7747,7 @@
   dependencies:
     "clsx" "^1.1.1"
 
-"react@^16.8.0 || ^17 || ^18", "react@^18.0.0", "react@^18.2.0", "react@>= 16", "react@>= 16.8.0", "react@>=16", "react@>=16.8 || ^17.0.0":
+"react@*", "react@^16.8.0 || ^17 || ^18", "react@^18.0.0", "react@^18.2.0", "react@>= 16", "react@>= 16.8.0", "react@>=0.14.0", "react@>=16", "react@>=16.8 || ^17.0.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
@@ -9008,6 +9035,13 @@
   "version" "1.0.8"
   dependencies:
     "makeerror" "1.0.12"
+
+"warning@^4.0.2":
+  "integrity" "sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w=="
+  "resolved" "https://registry.npmjs.org/warning/-/warning-4.0.3.tgz"
+  "version" "4.0.3"
+  dependencies:
+    "loose-envify" "^1.0.0"
 
 "watchpack@^2.4.0":
   "integrity" "sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg=="
