@@ -75,4 +75,5 @@ export const Button = styled.button`
     transition: all .3s;
     transform: scale(0.99);
   }
+  
 `;
