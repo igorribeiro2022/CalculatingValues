@@ -27,7 +27,7 @@ function OutputInfo() {
           <p>Amanhã: <span>R$ 0,00</span></p>
           <p>Em 15 dias: <span>R$ 0,00</span></p>
           <p>Em 30 dias: <span>R$ 0,00</span></p>
-          <p>Em 60 dias: <span>R$ 0,00</span></p>
+          <p>Em 90 dias: <span>R$ 0,00</span></p>
         </>
       )}
     </Response>
