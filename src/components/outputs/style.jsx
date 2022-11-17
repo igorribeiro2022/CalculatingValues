@@ -22,4 +22,10 @@ export const Response = styled.div`
     span {
         font-weight: 600;
     }
+
+    @media (max-width: 550px) {
+        width: 100%;
+        margin-top: 30px;
+    }
+
 `

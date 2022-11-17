@@ -16,7 +16,7 @@ export const AppDiv = styled.div`
   display: flex;
   flex-direction: column;
 
-  > div {
+  .inout {
     display: flex;
     width: 100%;
   }
@@ -25,6 +25,23 @@ export const AppDiv = styled.div`
     display: flex;
     align-items: center;
     gap: 15px;
+  }
+
+  @media (max-width: 550px) {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0;
+    overflow: auto;
+  
+    .title {
+      h1 {
+        font-size: 15px;
+      }
+    }
+
+    .inout {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -38,4 +55,11 @@ export const Status = styled.div`
   color: var(--gray-0);
   background-color: ${props => props.isOnline ? "var(--sucess)" : "var(--negative)"};
   font-size: 0.8rem;
+  
+  @media (max-width: 550px) {
+    padding: 0 5px;
+    height: 15px;
+    font-size: 0.7rem;
+
+  }
 `

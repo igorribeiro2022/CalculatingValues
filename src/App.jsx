@@ -19,7 +19,7 @@ function App() {
           <h1>Simule sua Antecipação</h1>
           <Status isOnline={isOnline}>{status}</Status>
         </div>
-        <div>
+        <div className="inout">
           <InputInfo />
           <OutputInfo />
         </div>
