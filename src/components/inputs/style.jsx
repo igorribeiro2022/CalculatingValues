@@ -24,6 +24,7 @@ export const Request = styled.form`
       background-color: var(--gray-0);
 
       input {
+        background-color: transparent;
         border: none;
         -moz-appearance: textfield;
         font-size: 0.9rem;
