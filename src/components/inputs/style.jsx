@@ -50,6 +50,14 @@ export const Request = styled.form`
       font-size: 0.7rem;
     }
   }
+
+  @media (max-width: 550px) {
+    width: 100%;
+
+    div div {
+      width: 100%;
+    }
+  }
 `;
 
 export const Button = styled.button`
@@ -73,4 +81,7 @@ export const Button = styled.button`
     transform: scale(0.99);
   }
   
+  @media (max-width: 550px) {
+    width: 100%;
+  }
 `;
